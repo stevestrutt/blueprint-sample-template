@@ -71,11 +71,10 @@ Inputs to be specified on the CLI at Blueprint create time. These values can be 
 
 
 ## Prerequisites
-1. Install the Schematics CLI plugin by follow the instructions in the [documentation](https://cloud.ibm.com/docs/schematics?topic=schematics-setup-cli)  
+1. Install the Schematics CLI plugin by follow the instructions in the [documentation](https://cloud.ibm.com/docs/schematics?topic=schematics-setup-cli).
 2. Configure [IAM access permissions](https://cloud.ibm.com/docs/schematics?topic=schematics-access) for the Schematics Blueprints service. 
 3. Configure [Cloud Object Storage IAM permissions](https://test.cloud.ibm.com/docs/cloud-object-storage?topic=cloud-object-storage-iam) to create COS instances.
-4. Set Schematics Target Region
-The target (manage from) Schematics region for the Blueprint instance is determined by the IBM Cloud CLI target region. The region can be set with the `ibmcloud target` command.
+4. Set Schematics Target Region. The region can be set with the `ibmcloud target -r` command. The Schematics Blueprint instance is determined by the IBM Cloud CLI target region.
 
 
 ## Usage 
@@ -111,14 +110,7 @@ $ ibmcloud schematics blueprint destroy -id blueprint_id
 $ ibmcloud schematics blueprint delete -id blueprint_id
 ```
 
-## Next Steps
-
-Looking for more samples? Check out the [{{site.data.keyword.bplong_notm}} GitHub repository](https://github.com/orgs/Cloud-Schematics/repositories/?q=topic:blueprint). 
-
-Check the example Readme files for further Blueprint customisation and usage scenarios for each sample. 
-
-
-### Customise blueprint-basic-example to create a resource group
+## Customise blueprint-basic-example to create a resource group
 In Pay-Go or Subscription accounts, or where the user has administrative permissions to create resource groups, the Blueprint can be customised to create a user specified resource group. The user must be an account owner or have been granted  [Account Management, editor or administrator permissions](https://cloud.ibm.com/docs/account?topic=account-account-services&interface=ui#account-management-actions-roles) to create resource groups. 
 
 With the required IAM permissions, a user specified resource group can be created by changing the folllowing input parameters on the create command:
@@ -131,4 +123,11 @@ $ ibmcloud schematics blueprint create -name Blueprint_Basic -resource-group Def
 
 This will create the resource group `test_group` and the COS instance will be created in this group. 
 
-Refer to the [Schematics FAQ](https://cloud.ibm.com/docs/schematics?topic=schematics-blueprints-faq&interface=ui#faqs-bp-basic-example) documentation for diagnosing and resolving the typical configuration errors with this example and their resolution.  
+Refer to the [Schematics FAQ](https://cloud.ibm.com/docs/schematics?topic=schematics-blueprints-faq&interface=ui#faqs-bp-basic-example) documentation for diagnosing and resolving the typical configuration errors with this example and their resolution.
+
+## Next Steps
+
+Looking for more samples? Check out the [IBM Cloud Schematics GitHub repository](https://github.com/orgs/Cloud-Schematics/repositories/?q=topic:blueprint). 
+
+Check the example [Readme](https://github.com/Cloud-Schematics/blueprint-basic-example/edit/main/README.md) files for further Blueprint customisation and the scenario usage.
+
