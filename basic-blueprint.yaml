@@ -1,7 +1,7 @@
 
 name: "Blueprint Basic Example"
 schema_version: "1.0.0"
-description: "Simple two module blueprint. Deploys Resource Group and COS bucket"
+description: "Simple blueprint to demonstrate module linking"
 inputs:
   - name: resource_group_name
   - name: provision_rg
@@ -19,7 +19,7 @@ modules:
     source:
       source_type: github
       git:
-        git_repo_url: "https://github.com/Cloud-Schematics/blueprint-example-modules/tree/main/IBM-ResourceGroup"
+        git_repo_url: "https://github.com/Cloud-Schematics/blueprint-example-modules/tree/main/IBM-DefaultResourceGroup"
         git_branch: main
     inputs:
       - name: provision
@@ -30,7 +30,6 @@ modules:
       - name: resource_group_name
       - name: resource_group_id
   - name: basic-cos-storage
-    layer: DB
     module_type: terraform
     source:
       source_type: github
