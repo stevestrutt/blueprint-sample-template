@@ -1,11 +1,7 @@
-# All input values specified on the blueprint create command 
-# null value requires inputs to be specified via the CLI or UI
 
-# Resource parameters
-resource_group_name: 
-# resource_group_name: basic
-provision_rg: 
-# provision_rg: true/false 
-# COS parameters
+# Resource Group module input values
+# none 
+
+# COS module input values
 cos_instance_name: Blueprint-basic
-cos_storage_plan: standard
+cos_storage_plan: lite

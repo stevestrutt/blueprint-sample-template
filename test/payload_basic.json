@@ -29,6 +29,14 @@
         {
             "name": "resource_group_name",
             "value": "myrg4"
+        },
+        {
+            "name": "cos_instance_name",
+            "value": "Blueprint-basic"
+        },
+        {
+            "name": "cos_storage_plan",
+            "value": "lite"
         }
     ],
     "description": "Deploys a simple two module blueprint",
