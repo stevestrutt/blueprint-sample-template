@@ -23,14 +23,6 @@
     ],
     "inputs": [
         {
-            "name": "provision_rg",
-            "value": "true"
-        },
-        {
-            "name": "resource_group_name",
-            "value": "myrg4"
-        },
-        {
             "name": "cos_instance_name",
             "value": "Blueprint-basic"
         },
