@@ -1,0 +1,35 @@
+# Sample input values
+
+# Complex vars - https://yaml-multiline.info/
+# HCL type for each variable is defined in the blueprint template
+
+
+simple_text: "text_word"
+
+# Block scalar literal
+list_any_flow_scalar: '["36", "mqm-grand", "madison-circle-garden"]'
+
+# Block scalar literal
+variable_1: |
+  [
+      "36", 
+      "mqm-grand", 
+      "madison-circle-garden"
+  ]
+
+# Block scalar literal - multi line
+variable_2: |
+  [
+    {
+      internal = 9900
+      external = 9900
+      protocol = "tcp"
+    },
+    {
+      internal = 9901
+      external = 9901
+      protocol = "ldp"
+    }
+  ]
+
+boolean_var: false

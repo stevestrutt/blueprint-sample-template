@@ -1,0 +1,62 @@
+---
+# Skeleton for creation of IBM Cloud Schematics blueprint templates
+name: "Blueprint Sample Template"
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Cloud-Schematics/vscode-blueprint-schema/master/blueprint_schema.json
+# Install the Red Hat VSCode YAML extension to enable assisted editing and validation
+# https://marketplace.visualstudio.com/items?itemName=redhat.vscode-yaml
+type: "blueprint"
+schema_version: "1.0.0"
+description: "Skeleton blueprint template"
+inputs:
+  - name: variable_1
+    type: list(any)
+  - name: variable_2
+    type: |
+      list(object({
+        internal = number
+        external = number
+        protocol = string
+      })
+outputs:
+  - name: <output_1>
+    value: $module.<module_1>.outputs.<output_1>
+  - name: <output_2>
+    value: $module.<module_2>.outputs.<output_1>
+settings:
+  - name: TF_VERSION
+    value: 1.0
+modules:
+  - name: <module_1>
+    module_type: terraform
+    source:
+      source_type: github
+      git:
+        git_repo_url: "https://github.com/Cloud-Schematics/blueprint-example-modules/"
+        git_branch: main
+    inputs:
+      - name: <module_var_1>
+        value: $blueprint.variable_1
+      - name: <module_var_2>
+        value: $blueprint.variable_2
+      - name: <module_var_3>
+        value: "constant"
+    outputs:
+      - name: <output_1>
+      - name: <output_2>
+  - name: <module_2>
+    module_type: terraform
+    source:
+      source_type: github
+      git:
+        git_repo_url: "https://github.com/Cloud-Schematics/blueprint-example-modules/"
+        git_branch: main
+    inputs:
+      - name: <module_var_1>
+        value: $blueprint.variable_1
+      - name: <module_var_2>
+        value: $module.<module_1>.outputs.<output_1>
+      - name: <module_var_3>
+        value: "constant"
+    outputs:
+      - name: <output_1>
+      - name: <output_2>`
