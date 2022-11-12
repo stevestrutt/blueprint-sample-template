@@ -8,9 +8,9 @@ type: "blueprint"
 schema_version: "1.0.0"
 description: "Skeleton blueprint template"
 inputs:
-  - name: variable_1
+  - name: <variable_1>
     type: list(any)
-  - name: variable_2
+  - name: <variable_2>
     type: |
       list(object({
         internal = number
@@ -35,9 +35,9 @@ modules:
         git_branch: main
     inputs:
       - name: <module_var_1>
-        value: $blueprint.variable_1
+        value: $blueprint.<variable_1>
       - name: <module_var_2>
-        value: $blueprint.variable_2
+        value: $blueprint.<variable_2>
       - name: <module_var_3>
         value: "constant"
     outputs:
