@@ -29,9 +29,9 @@ modules:
   - name: <module_1>
     module_type: terraform
     source:
-      source_type: github
+      source_type: git
       git:
-        git_repo_url: "https://github.com/Cloud-Schematics/blueprint-example-modules/"
+        git_repo_url: "https://github.com/Cloud-Schematics/blueprint-example-modules"
         git_branch: main
     inputs:
       - name: <module_var_1>
@@ -46,9 +46,9 @@ modules:
   - name: <module_2>
     module_type: terraform
     source:
-      source_type: github
+      source_type: git
       git:
-        git_repo_url: "https://github.com/Cloud-Schematics/blueprint-example-modules/"
+        git_repo_url: "https://github.com/Cloud-Schematics/blueprint-example-modules"
         git_branch: main
     inputs:
       - name: <module_var_1>
