@@ -31,7 +31,7 @@ modules:
     source:
       source_type: git
       git:
-        git_repo_url: "https://github.com/Cloud-Schematics/blueprint-example-modules"
+        git_repo_url: "https://github.com/Cloud-Schematics/blueprint-example-modules/tree/main/IBM-DefaultResourceGroup"
         git_branch: main
     inputs:
       - name: <module_var_1>
@@ -48,7 +48,7 @@ modules:
     source:
       source_type: git
       git:
-        git_repo_url: "https://github.com/Cloud-Schematics/blueprint-example-modules"
+        git_repo_url: "https://github.com/Cloud-Schematics/blueprint-example-modules/tree/main/IBM-DefaultResourceGroup"
         git_branch: main
     inputs:
       - name: <module_var_1>
