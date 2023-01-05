@@ -9,7 +9,7 @@ simple_text: "text_word"
 list_any_flow_scalar: '["36", "mqm-grand", "madison-circle-garden"]'
 
 # Block scalar literal
-<variable_1>: |
+variable_1: |
   [
       "36", 
       "mqm-grand", 
@@ -17,7 +17,7 @@ list_any_flow_scalar: '["36", "mqm-grand", "madison-circle-garden"]'
   ]
 
 # Block scalar literal - multi line
-<variable_2>: |
+variable_2: |
   [
     {
       internal = 9900
