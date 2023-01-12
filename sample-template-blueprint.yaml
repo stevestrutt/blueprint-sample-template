@@ -39,7 +39,7 @@ modules:
       - name: module_var_2
         value: $blueprint.variable_2
       - name: module_var_3
-        value: "constant"
+        value: null
     outputs:
       - name: output_1
       - name: output_2
