@@ -29,7 +29,7 @@ modules:
   - name: module_1
     module_type: terraform
     source:
-      source_type: git
+      source_type: github
       git:
         git_repo_url: "https://github.com/Cloud-Schematics/blueprint-example-modules/tree/main/IBM-DefaultResourceGroup"
         git_branch: main
@@ -46,7 +46,7 @@ modules:
   - name: module_2
     module_type: terraform
     source:
-      source_type: git
+      source_type: github
       git:
         git_repo_url: "https://github.com/Cloud-Schematics/blueprint-example-modules/tree/main/IBM-DefaultResourceGroup"
         git_branch: main
