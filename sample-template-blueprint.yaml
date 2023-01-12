@@ -31,14 +31,14 @@ modules:
     source:
       source_type: github
       git:
-        git_repo_url: "https://github.com/Cloud-Schematics/blueprint-example-modules/tree/main/IBM-DefaultResourceGroup"
+        git_repo_url: "https://github.com/stevestrutt/blueprint-example-modules/tree/main/IBM-Null"
         git_branch: main
     inputs:
       - name: module_var_1
         value: $blueprint.variable_1
       - name: module_var_2
         value: $blueprint.variable_2
-      - name: module_var_3
+      - name: null_var
         value: null
     outputs:
       - name: output_1
@@ -48,13 +48,13 @@ modules:
     source:
       source_type: github
       git:
-        git_repo_url: "https://github.com/Cloud-Schematics/blueprint-example-modules/tree/main/IBM-DefaultResourceGroup"
+        git_repo_url: "https://github.com/stevestrutt/blueprint-example-modules/tree/main/IBM-Null"
         git_branch: main
     inputs:
       - name: module_var_1
         value: $blueprint.variable_1
       - name: module_var_2
-        value: $module.module_1.outputs.output_1
+        value: $module.module_1.outputs.null_value
       - name: module_var_3
         value: "constant"
     outputs:
