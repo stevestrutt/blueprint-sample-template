@@ -38,8 +38,8 @@ modules:
         value: $blueprint.variable_1
       - name: module_var_2
         value: $blueprint.variable_2
-      - name: null_var
-        value: null
+      # - name: null_var
+      #   value: null
     outputs:
       - name: output_1
       - name: output_2
